@@ -1,21 +1,21 @@
-import React from 'react'
-
-const Header = ({score, moves}) => {
+export const GameHeader = ({ score, moves, onReset }) => {
   return (
-    <div className='game-header' >
+    <div className="game-header">
       <h1>🎮 Memory Card Game</h1>
-      <div className='stats '>
-        <div className='stat-item'>
-          <span className='stat-label'>Score:</span>{""}
-          <span className='stat-value'>{score}</span>
+      <div className="stats">
+        <div className="stat-item">
+          <span className="stat-label">Score:</span>{" "}
+          <span className="stat-value">{score}</span>
         </div>
-        <div className='stat-item'>
-          <span className='stat-label'>Move:</span>{""} 
-          <span className='stat-value'>{moves}</span>  
+        <div className="stat-item">
+          <span className="stat-label">Moves:</span>{" "}
+          <span className="stat-value">{moves}</span>
         </div>
       </div>
-    </div>
-  )
-}
 
-export default Header
+      <button className="reset-btn" onClick={onReset}>
+        New Game
+      </button>
+    </div>
+  );
+};
