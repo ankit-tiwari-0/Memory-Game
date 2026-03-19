@@ -1,16 +1,73 @@
-# React + Vite
+# 🎮 Memory Card Game (React + Vite)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A fun and interactive **Memory Card Game** built using **React.js** and **Vite**.
+This project helps improve logic-building skills, state management, and component structuring in React.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Features
 
-## React Compiler
+* 🧠 Flip cards and match pairs
+* 🔀 Random card shuffle every game
+* 📊 Score and move tracking
+* 🔒 Prevents invalid clicks
+* 🎉 Win message when game completes
+* 🔄 Restart game anytime
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## 🛠️ Tech Stack
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+* ⚛️ React.js
+* ⚡ Vite
+* 🎨 CSS
+* 🧩 Component-based architecture
+* 🪝 Custom Hooks (`useGameLogic`)
+
+---
+
+## 📁 Project Structure
+
+```
+src/
+ ├── components/
+ │    ├── Card.jsx
+ │    ├── GameHeader.jsx
+ │    ├── WinMessage.jsx
+ ├── hooks/
+ │    ├── useGameLogic.js
+ ├── App.jsx
+ ├── main.jsx
+```
+
+---
+
+## 🧠 What I Learned
+
+* How to break UI into reusable components
+* Managing complex state with custom hooks
+* Handling user interactions (click events)
+* Game logic implementation (matching cards)
+* Importance of clean project structure
+* Debugging real-world issues (like import paths 😅)
+
+---
+---
+
+## 🎮 How to Play
+
+* Click on a card to flip it
+* Flip two cards to find a matching pair
+* If matched → they stay open ✅
+* If not → they flip back ❌
+* Complete all matches to win 🎉
+
+---
+
+## ⭐ Show Some Love
+
+If you found this project helpful, give it a ⭐ on GitHub!
+
+---
+
+### 🚀 Built to improve logic & React skills
