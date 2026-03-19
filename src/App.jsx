@@ -1,41 +1,50 @@
-import React, { useState } from 'react'
-import Header from './Component/Header'
-import Card from './Component/Card'
+import { Card } from "./Component/Card";
+import { GameHeader } from "./Component/GameHeader";
+import { WinMessage } from "./Component/WinMessage";
+import { useGameLogic } from "./hooks/useGameLogic";
 
-const cardval = [
+const cardValues = [
+  "🍎",
   "🍌",
   "🍇",
-  "🍉",
-  "🍒",
+  "🍊",
   "🍓",
-  "🍍",
+  "🥝",
   "🍑",
-  "🥑",
   "🍒",
-  "🍇",
-  "🍍",
-  "🍉",
-  "🍓",
+  "🍎",
   "🍌",
-  "🥑",
+  "🍇",
+  "🍊",
+  "🍓",
+  "🥝",
   "🍑",
-]
+  "🍒",
+];
 
-const App = () => {
-  const [card, setcard] = useState([])
+function App() {
+  const {
+    cards,
+    score,
+    moves,
+    handleCardClick,
+    initializeGame,
+    isGameComplete,
+  } = useGameLogic(cardValues);
+
   return (
-    <div className='app'>
-      <Header score={3} moves={0}  />
+    <div className="app">
+      <GameHeader score={score} moves={moves} onReset={initializeGame} />
 
-      <div className='cards-grid'>
-        {
-         cardval.map((card) => (
-           <Card card = {card} />  
-         ))
-        }
+      {isGameComplete && <WinMessage moves={moves} />}
+
+      <div className="cards-grid">
+        {cards.map((card) => (
+          <Card card={card} onClick={handleCardClick} />
+        ))}
       </div>
     </div>
-  )
+  );
 }
 
-export default App
+export default App;
