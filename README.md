@@ -1,4 +1,4 @@
-# 🎮 Memory Card Game (React + Vite)
+# 🎮 Memory Card Game
 
 A fun and interactive **Memory Card Game** built using **React.js** and **Vite**.
 This project helps improve logic-building skills, state management, and component structuring in React.
