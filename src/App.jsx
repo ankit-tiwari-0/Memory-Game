@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Header from './Component/Header'
 import Card from './Component/Card'
 
@@ -22,6 +22,7 @@ const cardval = [
 ]
 
 const App = () => {
+  const [card, setcard] = useState([])
   return (
     <div className='app'>
       <Header score={3} moves={0}  />
